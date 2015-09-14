@@ -666,25 +666,17 @@ withAutoCompleteString:(NSString *)string
 
 - (void)setNoneStyleForAutoCompleteTableView
 {
-    [self setAutoCompleteTableCornerRadius:8.0];
+    [self setAutoCompleteTableCornerRadius:10.0];
     [self setAutoCompleteTableOriginOffset:CGSizeMake(0, 7)];
     [self setAutoCompleteScrollIndicatorInsets:UIEdgeInsetsZero];
     [self setAutoCompleteContentInsets:UIEdgeInsetsZero];
-    [self setAutoCompleteTableBorderWidth:1.0];
+    [self setAutoCompleteTableBorderWidth:0.0];
     
     
-    UIColor *lightBlueColor = [UIColor colorWithRed:181/255.0
-                                              green:204/255.0
-                                               blue:255/255.0
-                                              alpha:1.0];
-    [self setAutoCompleteTableBorderColor:lightBlueColor];
+    [self setAutoCompleteTableBorderColor:[UIColor clearColor]];
     
     
-    UIColor *blueTextColor = [UIColor colorWithRed:23/255.0
-                                             green:119/255.0
-                                              blue:206/255.0
-                                             alpha:1.0];
-    [self setAutoCompleteTableCellTextColor:blueTextColor];
+    [self setAutoCompleteTableCellTextColor:[UIColor whiteColor]];
     
     if(self.backgroundColor == [UIColor clearColor]){
         [self setAutoCompleteTableBackgroundColor:[UIColor whiteColor]];
