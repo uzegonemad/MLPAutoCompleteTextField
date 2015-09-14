@@ -122,9 +122,9 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
               options:NSKeyValueObservingOptionNew context:nil];
     
     
-    [self addObserver:self
+    /*[self addObserver:self
            forKeyPath:kAutoCompleteTableViewHiddenKeyPath
-              options:NSKeyValueObservingOptionNew context:nil];
+              options:NSKeyValueObservingOptionNew context:nil];*/
     
     
     [self addObserver:self
@@ -146,7 +146,7 @@ static NSString *kDefaultAutoCompleteCellIdentifier = @"_DefaultAutoCompleteCell
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     
     [self removeObserver:self forKeyPath:kBorderStyleKeyPath];
-    [self removeObserver:self forKeyPath:kAutoCompleteTableViewHiddenKeyPath];
+    //[self removeObserver:self forKeyPath:kAutoCompleteTableViewHiddenKeyPath];
     [self removeObserver:self forKeyPath:kBackgroundColorKeyPath];
     [self removeObserver:self forKeyPath:kKeyboardAccessoryInputKeyPath];
 }
